@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+</head>
+
+<body>
+    <div style="max-width:40vw;margin:auto;">
+        <div id="myDIV" class="header">
+            <h2>Todo List</h2>
+            <h2 id="studentIdText">学号:</h2>
+            <input type="text" id="studentIdInput" placeholder="学号...">
+            <span onclick="saveStudentId()" class="addBtn">Load</span>
+            <input type="text" id="myInput" placeholder="Title...">
+            <span onclick="newElement()" class="addBtn">Add</span>
+        </div>
+
+        <ul id="myUL">
+        </ul>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
