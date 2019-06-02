@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            min-width: 100vw;
+            overflow: hidden;
+            font-size: 300%;
+        }
+        body {
+            background-image:
+                linear-gradient(
+                to top right, 
+                #7f7fd5,
+                #86a8e7, 
+                #91eae4 
+            );
+        }
+    </style>
+</head>
+<body>
+    <div id="main" class="animated">
+        點擊我開始抽獎
+    </div>
+    <script>
+        let students = [
+            "廖振宏",
+            "袁育颖",
+            "张彬詠",
+            "吳汶霜",
+            "陈政铭",
+            "刘健荣",
+            "郭宇浩",
+            "思华",
+            "何宜恩",
+            "黄俊豪",
+            "傅宇岽",
+            "钟永康",
+            "丘振光"
+        ]
+        let main = document.querySelector("#main")
+        main.addEventListener('click', (event)=>{
+            main.textContent = "..."
+            main.classList.add("rubberBand")
+            main.classList.add("infinite")
+            main.classList.remove("tada")
+            setTimeout(()=>{
+                setTimeout(()=>{
+                    let random = Math.floor(Math.random() * students.length);
+                    main.textContent = students[random]
+                    main.classList.add("tada")
+                    main.classList.remove("rubberBand")
+                    main.classList.remove("infinite")
+                }, 2000)
+            }, 500)
+        })
+    </script>
+</body>
+</html>
